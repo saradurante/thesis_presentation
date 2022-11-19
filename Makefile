@@ -1,0 +1,3 @@
+
+build:
+	xelatex main.tex

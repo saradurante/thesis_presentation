@@ -1,0 +1,92 @@
+% !TeX TS-program = xelatex
+
+\documentclass[aspectratio=43,11p, handout]{beamer}
+%\documentclass[aspectratio=43,11p, handout]{beamer} % compile version without pause
+%\documentclass[aspectratio=169,11p]{beamer}
+
+\usetheme{metropolis}           % Use metropolis theme
+
+\usepackage{FiraSans}
+\usepackage[many]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{fontawesome5}
+
+\definecolor{cccolor}{rgb}{.67,.7,.67}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\graphicspath{ {./images/} }
+\captionsetup{labelformat=empty}
+\setsansfont[
+    Extension      = .otf,
+    UprightFont    = *-Light,
+    ItalicFont     = *-LightItalic,
+    BoldFont       = *-Regular
+]{FiraSans}
+\setmonofont[
+    Extension   = .otf,
+    UprightFont = *-Regular,
+    BoldFont    = *-Medium
+]{FiraMono}
+
+\newcommand{\adv}[1]{ {\color{gray} #1} }
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
+\title{TODO: Presentation Title}
+\date{\today}
+\author{Vincenzo Palazzo vincenzopalazzodev@gmail.com}
+\institute{https://github.com/vincenzopalazzo}
+
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+\begin{document}
+  \maketitle
+
+  \begin{frame}{Table of Content}
+    \tableofcontents
+  \end{frame}
+
+  \section{TODO: add a title}
+
+  \begin{frame}{TODO: add a title}
+    \begin{itemize}
+    \item one item;
+    \item \pause second item after pause;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}[standout]
+    \begin{mdframed}[outerlinecolor=black,outerlinewidth=2pt,linecolor=cccolor,middlelinewidth=3pt,roundcorner=10pt]
+      This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+      \faCreativeCommons\ \faCreativeCommonsBy\ \faCreativeCommonsSa
+    \end{mdframed}
+  \end{frame}
+\end{document}
